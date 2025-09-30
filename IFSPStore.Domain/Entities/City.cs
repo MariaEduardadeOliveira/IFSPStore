@@ -1,0 +1,15 @@
+﻿using IFSPStore.Domain.Base;
+
+namespace IFSPStore.Domain.Entities
+{
+    internal class City : BaseEntity<int>
+    {
+        public City(int id, string name, string state) : base(id)
+        {
+            Name = name;
+            State = state;
+        }
+        public string Name { get; set; }
+        public string State { get; set; }
+    }
+}
