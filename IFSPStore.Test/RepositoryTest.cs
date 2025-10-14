@@ -14,9 +14,9 @@ namespace IFSPStore.Test
             {
                 Console.WriteLine("Connected!");
 
-                var category1 = new Category(1, "Carnes");
-                var category2 = new Category(2, "Bebidas");
-                var category3 = new Category(3, "Doces");
+                var category1 = new Category(4, "Carnes");
+                var category2 = new Category(5, "Bebidas");
+                var category3 = new Category(6, "Doces");
 
                 context.Categories.Add(category1);
                 context.Categories.Add(category2);
