@@ -2,7 +2,11 @@
 {
     public abstract class BaseEntity<TId> : IBaseEntity
     {
-        public BaseEntity(TId id) 
+        protected BaseEntity()
+        {
+            
+        }
+        public BaseEntity(TId id)
         {
             Id = id;
         }
