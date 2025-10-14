@@ -13,7 +13,7 @@ namespace IFSPStore.Repository.Mapping
             builder.HasKey(prop => prop.Id);
             builder.Property(prop => prop.SaleDate);
             builder.Property(prop => prop.SaleTotal);
-            builder.Property(prop => prop.Salesman);
+            builder.HasOne(prop => prop.Salesman);
             builder.HasOne(prop => prop.Customer);
             builder.HasMany(prop => prop.SaleItens)
                 .WithOne(prop => prop.Sale)
