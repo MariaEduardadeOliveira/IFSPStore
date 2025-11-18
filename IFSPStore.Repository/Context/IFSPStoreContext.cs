@@ -7,7 +7,7 @@ namespace IFSPStore.Repository.Context
 {
     public class IFSPStoreContext : DbContext
     {
-        public IFSPStoreContext() : base()
+        public IFSPStoreContext(DbContextOptions<IFSPStoreContext> op=null) : base(op)
         {
             Database.EnsureCreated();
         }
