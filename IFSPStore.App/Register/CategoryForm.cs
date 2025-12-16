@@ -5,10 +5,11 @@ using IFSPStore.Service.Validators;
 
 namespace IFSPStore.App.Register
 {
-    public partial class CategoryForm: BaseForm
+    public partial class CategoryForm : BaseForm
     {
         private IBaseService<Category> _categoryService;
         private List<Category>? categories;
+        private List<CategoryViewModel>?
         public CategoryForm(IBaseService<Category> categoryService)
         {
             _categoryService = categoryService;
@@ -16,7 +17,7 @@ namespace IFSPStore.App.Register
         }
         private void FormToObject(Category category)
         {
-            category.Name = txtName.Text;
+            //category.Name = txtName.Text;
         }
         protected override void Save()
         {
@@ -24,7 +25,8 @@ namespace IFSPStore.App.Register
             {
                 if (IsEditMode)
                 {
-                    int.TryParse(txtId.Text, out int id);
+                    //int.TryParse(txtId.Text, out int id);
+                    int id = 0;
                     var category = _categoryService.GetById<Category>(id);
                     FormToObject(category);
                     category = _categoryService.Update<Category, Category, CategoryValidator>(category);
@@ -35,7 +37,8 @@ namespace IFSPStore.App.Register
                     FormToObject(category);
                     _categoryService.Add<Category, Category, CategoryValidator>(category);
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, @"IFSP Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -61,8 +64,8 @@ namespace IFSPStore.App.Register
         }
         protected override void GridToForm(DataGridViewRow? record)
         {
-            txtId.Text = record?.Cells["Id"].Value.ToString();
-            txtName.Text = record.Cells["Name"].Value.ToString();
+           // txtId.Text = record?.Cells["Id"].Value.ToString();
+            t//xtName.Text = record.Cells["Name"].Value.ToString();
         }
     }
 }

@@ -32,11 +32,13 @@
             // 
             // CategoryForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 430);
+            ClientSize = new Size(782, 573);
             Location = new Point(0, 0);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "CategoryForm";
+            Padding = new Padding(3, 113, 3, 5);
             Text = "CategoryForm";
             ResumeLayout(false);
         }
